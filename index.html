@@ -4,36 +4,87 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>MPCHASE — The AI Real Estate Marketplace</title>
-  <meta name="description" content="MPCHASE LLC — AI-powered real estate marketplace. Launching soon." />
+  <meta name="description" content="MPCHASE — Where property meets future. The AI Real Estate Marketplace." />
   <meta name="robots" content="index,follow" />
   <style>
-    :root { --fg: #f5f7fb; --muted: #9aa3b2; --accent: #7aa2ff; }
-    * { box-sizing: border-box; }
-    html,body { height: 100%; }
-    body {
-      margin: 0; background: #0b0b0b; color: var(--fg);
-      font: 16px/1.45 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-      display: grid; place-items: center; padding: 24px;
+    :root{
+      --bg-0:#0b0f14;   /* very dark blue/black */
+      --bg-1:#0e1320;   /* deep blue */
+      --bg-2:#101826;   /* tint for gradient ring */
+      --fg:#eaf0ff;     /* main text */
+      --muted:#9aa6b2;  /* secondary text */
+      --accent:#7aa2ff; /* link/brand accent */
+      --card:#0d121bcc; /* translucent card (if needed) */
     }
-    .wrap { text-align: center; max-width: 720px; padding: 40px 24px; }
-    .logo { width: 96px; height: 96px; margin: 0 auto 20px; display: block; }
-    h1 { margin: 8px 0 6px; font-size: clamp(26px, 4.5vw, 40px); letter-spacing: .2px; }
-    p.slogan { margin: 8px 0 32px; font-size: clamp(16px, 2.4vw, 20px); color: var(--muted); }
-    footer { margin-top: 36px; font-size: 13px; color: var(--muted); }
-    .divider { width: 72px; height: 1px; background: #2a2a2a; margin: 20px auto 0; }
-    .name { font-weight: 600; letter-spacing: .3px; }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; color:var(--fg);
+      font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      display:grid; place-items:center;
+      background:
+        radial-gradient(1200px 600px at 50% -10%, #16213a 0%, transparent 60%),
+        radial-gradient(900px 400px at 80% 120%, #132033 0%, transparent 60%),
+        linear-gradient(180deg, var(--bg-1), var(--bg-0));
+      overflow:hidden;
+    }
+    main{ text-align:center; padding:56px 24px; max-width:920px; }
+    .logo{ width:110px; height:auto; margin:0 auto 20px; display:block; }
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(34px, 6vw, 56px);
+      letter-spacing:.2px; font-weight:800;
+    }
+    .sub{
+      margin:0 0 36px;
+      font-size: clamp(16px, 2.4vw, 20px);
+      color: var(--muted);
+    }
+    .cta-row{
+      display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:26px;
+    }
+    .btn{
+      appearance:none; border:1px solid #22324a; background:#162235;
+      color:#eaf0ff; padding:12px 18px; border-radius:10px;
+      font-weight:600; text-decoration:none; transition:transform .04s ease, border-color .2s ease, background .2s ease;
+    }
+    .btn.primary{
+      background: linear-gradient(135deg,#3a66ff,#6aa8ff);
+      border-color: transparent;
+    }
+    .btn:hover{ transform:translateY(-1px); }
+    footer{
+      margin-top:26px; font-size:13px; color:var(--muted);
+    }
+    .disclaimer{
+      margin-top:8px; font-size:12px; color:#7f8a96;
+    }
+    a{ color:var(--accent); text-decoration:none }
+    a:hover{text-decoration:underline}
   </style>
 </head>
 <body>
-  <main class="wrap" role="main">
-    <img class="logo" src="logo.svg" alt="MPCHASE logo" />
-    <h1 class="name">MPCHASE</h1>
-    <p class="slogan">The AI Real Estate Marketplace</p>
+  <main>
+    <!-- Logo -->
+    <img class="logo" src="logo-dark.png" alt="MPCHASE logo">
 
+    <!-- Headline + Subline -->
+    <h1>Where property meets future.</h1>
+    <p class="sub">The AI Real Estate Marketplace</p>
+
+    <!-- (Optional) Buttons – funktionieren einfach als Platzhalter/Links -->
+    <div class="cta-row">
+      <a class="btn primary" href="mailto:support@mpchase.com">Contact us</a>
+      <a class="btn" href="mailto:support@mpchase.com?subject=Investor%20relations">Investor relations</a>
+    </div>
+
+    <!-- Footer -->
     <footer>
       © 2025 MPCHASE LLC · All rights reserved ·
-      <a href="mailto:support@mpchase.com" style="color:var(--accent); text-decoration:none;">support@mpchase.com</a>
-      <div class="divider"></div>
+      <a href="mailto:support@mpchase.com">support@mpchase.com</a>
+      <div class="disclaimer">
+        MPCHASE is a technology provider and online marketplace — not a broker; no legal or tax advice. Content provided by sellers/agents.
+      </div>
     </footer>
   </main>
 </body>
